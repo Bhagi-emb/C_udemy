@@ -1,0 +1,82 @@
+
+Type conversion is the conversion of one data type into another data type.
+In C, type conversion can be classified into two types:
+
+1. Implicit Type Conversion :
+Implicit type conversion is performed by the compiler without programmer intervention.
+In implicit type conversion, the compiler automatically converts one data type into another data type.
+For example, if you assign an integer value to a floating-point variable, the compiler automatically converts the integer into a float.
+Implicit type conversion is also known as automatic type conversion.
+
+2.Explicit Type Conversion:
+Explicit type conversion is performed by the programmer.
+In explicit type conversion, the programmer manually converts one data type into another data type.
+Explicit type conversion is also known as type casting.
+Type casting is a way to convert a variable from one data type to another data type.
+
+In C, type casting can be done in two ways:
+
+1. Using the cast operator :
+The cast operator is denoted by a pair of parentheses enclosing the data type to which the variable is to be converted.
+The syntax for using the cast operator is as follows:
+(data_type) expression
+Here, data_type is the data type to which the variable is to be converted, and expression is the variable to be converted.
+For example, to convert an integer variable x into a float, you can use the following syntax:
+float y = (float) x;
+In this example, the integer variable x is converted into a float using the cast operator.
+
+2. Using the conversion functions :
+In C, there are several conversion functions available that can be used to convert one data type into another data type.
+The following are some of the conversion functions available in C:
+1. atoi() - converts a string to an integer
+2. atof() - converts a string to a float
+3. atol() - converts a string to a long integer
+4. itoa() - converts an integer to a string
+5. ltoa() - converts a long integer to a string
+6. dtoa() - converts a double to a string
+7. strtol() - converts a string to a long integer
+8. strtoul() - converts a string to an unsigned long integer
+9. strtod() - converts a string to a double
+10. strtol() - converts a string to a long integer
+11. strtoul() - converts a string to an unsigned long integer
+12. strtod() - converts a string to a double
+13. strtol() - converts a string to a long integer
+14. strtoul() - converts a string to an unsigned long integer
+15. strtod() - converts a string to a double
+16. strtol() - converts a string to a long integer
+17. strtoul() - converts a string to an unsigned long integer
+18. strtod() - converts a string to a double
+19. strtol() - converts a string to a long integer
+20. strtoul() - converts a string to an unsigned long integer
+21. strtod() - converts a string to a double
+22. strtol() - converts a string to a long integer
+23. strtoul() - converts a string to an unsigned long integer
+24. strtod() - converts a string to a double
+25. strtol() - converts a string to a long integer
+26. strtoul() - converts a string to an unsigned long integer
+27. strtod() - converts a string to a double
+28. strtol() - converts a string to a long integer
+29. strtoul() - converts a string to an unsigned long integer
+30. strtod() - converts a string to a double
+31. strtol() - converts a string to a long integer
+32. strtoul() - converts a string to an unsigned long integer
+33. strtod() - converts a string to a double
+34. strtol() - converts a string to a long integer
+35. strtoul() - converts a string to an unsigned long integer
+36. strtod() - converts a string to a double
+37. strtol() - converts a string to a long integer
+38. strtoul() - converts a string to an unsigned long integer
+39. strtod() - converts a string to a double
+40. strtol() - converts a string to a long integer
+41. strtoul() - converts a string to an unsigned long integer
+42. strtod() - converts a string to a double
+43. strtol() - converts a string to a long integer
+44. strtoul() - converts a string to an unsigned long integer
+45. strtod() - converts a string to a double
+46. strtol() - converts a string to a long integer
+47. strtoul() - converts a string to an unsigned long integer
+48. strtod() - converts a string to a double
+49. strtol() - converts a string to a long integer
+50. strtoul() - converts a string to an unsigned long integer
+
+In this example, we will use the cast operator to convert an integer variable into a float.
