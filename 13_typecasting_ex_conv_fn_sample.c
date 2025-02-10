@@ -4,6 +4,7 @@ Type casting -> explicit conversion using conversion functions
 
 #include <stdio.h>
 #include <stdlib.h>
+#include <string.h>
 
 int main()
 {

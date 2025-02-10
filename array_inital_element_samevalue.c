@@ -1,3 +1,5 @@
+/* By using array - square root */
+
 #include<stdio.h>
 int main(void)
 {
