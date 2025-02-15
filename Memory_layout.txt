@@ -1,0 +1,90 @@
+==============
+Memory layout:
+==============
+
++--------------------+  High Memory (Top of Address Space)
+| Command-Line Args  |  (Stored in stack)
++--------------------+
+|       Stack       |  (Grows downward ⬇)
+|    Local Variables|
+|  Function Calls   |
++--------------------+
+|      Heap         |  (Grows upward ⬆)
+|  malloc/calloc    |
+|  realloc/free     |
++--------------------+
+|  BSS Segment      |  (Uninitialized global/static variables)
++--------------------+
+|  Data Segment     |  (Initialized global/static variables)
++--------------------+
+|  Text Segment     |  (Program Code - Read-Only)
++--------------------+  Low Memory (Start of Address Space)
+
+1. Stack Segment (Grows Downward ⬇)
+    Stores local variables and function call information.
+    Managed automatically by the compiler.
+    Fast allocation & deallocation.
+    Overflows if too many recursive function calls (stack overflow)
+    eg:
+    void func() {
+    int x = 10; // Stored in stack
+    }
+
+2. Heap Segment (Grows Upward ⬆)
+    Stores dynamically allocated memory (malloc, calloc, realloc).
+    Managed manually (must be freed using free()).
+    Slower than stack but flexible.
+    Can cause memory leaks if not properly freed.
+    eg:
+    int *ptr = (int *)malloc(5 * sizeof(int)); // Allocated in heap
+
+3. BSS Segment (Uninitialized Data)
+    Stores global/static variables that are not initialized.
+    Automatically initialized to zero by default.
+    eg: 
+    static int count;  // Stored in BSS, initialized to 0
+
+4. Data Segment (Initialized Data)
+    Stores global/static variables that are initialized before execution.
+    eg:
+    int num = 10; // Stored in Data segment
+
+5. Text Segment (Code Segment)
+    Stores the executable program code.
+    Read-only to prevent modification at runtime.
+    eg: 
+    void printMessage() {
+    printf("Hello, World!\n");  // Code stored in Text segment
+    }
+
+============================
+ Memory Hierarchy in C Programs:
+============================
+      +----------------------------+  <-- High Addresses
+      |       Command-Line Args    |
+      |      (Stored in Stack)     |
+      +----------------------------+
+      |         Stack Memory       |
+      |  (Local variables, function|
+      |    call management, etc.)  |
+      +----------------------------+
+      |         Heap Memory        |  <-- Dynamic allocation (malloc/calloc)
+      +----------------------------+
+      |   Global/Static Data (Data,|
+      |         BSS segments)      |
+      +----------------------------+
+      |         Code (Text)        |
+      |     (Program Instructions) |
+      +----------------------------+  <-- Primary Memory ends here
+      |                            |
+      |    Secondary Memory        |  <-- Non-volatile storage (HDD, SSD)
+      |  (Files, Databases, etc.)  |
+      +----------------------------+  <-- Low Addresses
+This diagram illustrates that while the primary memory (RAM) is used for running your C program, secondary memory is used for storing data permanently.
+---------
+Summary:
+---------
+Primary Memory (RAM):
+Is where your C program executes—using stack, heap, and data segments. It is fast and volatile.
+Secondary Memory:
+consists of non-volatile storage devices like HDDs or SSDs. In C, you work with secondary memory via file I/O functions to read from or write data to files.
