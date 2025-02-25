@@ -7,4 +7,4 @@ Write a program to print the factorial of a given number with the help of recurs
 Write a program to check an Armstrong number.
 Write a program to reverse a given number.
 Write a Program to check whether a linked list is circular or not.
-Write a program to Merge two sorted linked lists.
+Write a program to Merge two sorted linked lists 
