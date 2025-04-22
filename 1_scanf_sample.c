@@ -16,7 +16,7 @@ int main()
 {
     int a;
     char str[100];
-    printf("Enter a number: ");
+    printf("Enter a str and number: ");
     scanf("%s %d",str,&a);
     printf("You entered: %s %d \n",str,a);
     return 0;
